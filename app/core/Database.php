@@ -17,7 +17,7 @@ class Database {
 
 		$option = [
 			PDO::ATTR_PERSISTENT => true,
-			PDO::ATTR_ERRORMODE => PDO::ERRORMODE_EXCEPTION
+			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 		];
 
 		try {
@@ -26,7 +26,6 @@ class Database {
 		} catch(PDOException $e){
 			die($e->getMessage());
 		}
-
 
 	}
 
